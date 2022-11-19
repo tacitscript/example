@@ -1,7 +1,7 @@
 # example
 Minimal example of tacitscript application
 
-Live: https://tacitscript.github.io/example/index.html
+Live: https://tacitscript.github.io/example
 
 Note, this is the minimal application as hosted on plunkr here: https://plnkr.co/edit/pg9UymjRiyxdyx7p
 
