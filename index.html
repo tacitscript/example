@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<style>
+	.hidden {display: none;}
+	</style>  
+	<body>
+	<div id="app" class="hidden">
+		Enter value: <input id="input" type="number"><br/><br/>
+		Double: <span id="double">0</span><br/>
+		Half: <span id="half">0</span>
+	</div>
+
+	<script type="text/javascript" src="https://unpkg.com/systemjs@0.20.9/dist/system.src.js"></script>
+	<script type="text/javascript">
+		(function (global) {
+		System.config({
+			transpiler: 'plugin-babel-tacitscript',
+			globalName: "example",
+			map: {
+			// babel transpiler
+			'plugin-babel-tacitscript': 'submodules/tacitscript/common/src/plugin-babel_c72965b-tacitscript.js',
+			'systemjs-babel-build': "submodules/tacitscript/common/lib/systemjs-babel-browser_c72965b.js",
+			"tacitscript": "submodules/tacitscript/common/src/tacitscript.js",
+			},
+			babelOptions: {
+			modularRuntime: false,
+			},  
+		});
+		})(this);
+	</script>
+		<script>
+			System.import('app.js').catch(function(err) {
+				console.error(err);
+			});
+		</script>
+	</body>
+</html>
